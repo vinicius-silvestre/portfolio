@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EPI - Higienização - Jogo Certo e Errado</title>
+    <link rel="icon shortcut" type="image/x-icon" href="https://www.atacadao.com.br/static/images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/effecthover.css" rel="stylesheet">
+    <link href="../css/typewrite.css" rel="stylesheet">
+    <link href="../css/gallery.css" rel="stylesheet">
+    <link href="../css/jogo.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="intro-jogo-certo">
+
+        <container>
+
+            <div class="row justify-content-md-center justify-content-sm-center ">
+                <div class=" mt-4 col-md-8 col-sm-12 col-lg-12 text-style-base fsize-72 shadowconsec colorwhite animated jackInTheBox  delay-05s text-center">
+                    <p>Jogo : certo ou errado</p>
+                </div>
+                
+            </div>
+
+            <div class="row justify-content-md-center mb-5 text-center">
+                <div class=" col-lg-8 col-md-6  mt-4 ">
+                    <audio id="audiofile">
+                                <source src="../audio/E59.wav" type="audio/wav">                                    
+                            </audio>
+                    <button onclick="myFunction() , playAudio()" class=" btn border border-success fsize-28 text-texto text-white text-center  animated fadeIn delay-1s">Clique Aqui <i class="fas fa-arrow-down "></i></button>
+                    <div id="myDIV">
+                        <p class="fsize-38 text-white text-style-base text-center animated fadeIn delay-1s">Preparamos um jogo para você mostrar que entendeu tudo de EPI's, vamos conhecer as regras do jogo! </p>
+                        <button onclick=" playAudio1() , myFunction1(), myFunction2(), myFunction3()" class=" btn border border-success fsize-28 text-texto text-white text-center  animated fadeIn delay-5s">Clique Aqui para conhecer as regras do jogo! <i class="fas fa-arrow-down "></i></button>
+                        <div class="row justify-content-md-center align-items-center">
+                            <div class="col-lg-7">
+                        <div id="myDIV1">
+                                <audio id="audiofile1">
+                                        <source src="../audio/E60-62.mp3" type="audio/mp3">                                    
+                                    </audio>
+                        <p class="fsize-38 text-white text-style-base text-left animated fadeIn delay-1s">REGRAS:</p>
+
+                        <li class="fsize-28 text-white text-texto text-left animated fadeIn delay-1s">Escolha somente os EPI’s de câmara fria;</li>
+                        <li class="fsize-28 text-white text-texto text-left animated fadeIn delay-1s">Clique em cima do EPI correto;</li>
+                        <li class="fsize-28 text-white text-texto text-left animated fadeIn delay-1s">Se você errou tente novamente.</li>
+                                    </div></div>
+                                    <div class="col-lg-4">
+                                            <div id="myDIV2">
+                                            <a href="08-parte5-higienizacao-jogo.html"><button" class="btn btn-success border border-info text-center text-texto fsize-24 animated fadeIn delay-21s" > Você está pronto? <br>Vamos Jogar então!</button></a>
+                                            </div>
+                                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+               
+
+            
+
+
+           
+            <br><br>
+            
+
+            <br><br><br>
+            <br><br>
+            
+
+            <br><br><br>
+            <br><br>
+            
+
+            <br><br><br>
+            <br><br>
+            
+
+            <br><br><br>
+            <br><br>
+            
+
+            <br><br><br>
+            <br><br>
+        </container>
+    </div>
+</body>
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    
+
+    function myFunction1() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    
+    function myFunction2() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+    
+    function myFunction3() {
+        var x = document.getElementById("myDIV3");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    function myFunction4() {
+        var x = document.getElementById("myDIV4");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<script>
+    var x = document.getElementById("audiofile");
+
+    function playAudio() {
+        x.play();
+    }
+
+    function pauseAudio() {
+        x.pause();
+    }
+
+
+
+    var y = document.getElementById("audiofile1");
+
+    function playAudio1() {
+        y.play();
+    }
+
+    function pauseAudio() {
+        y.pause();
+    }
+
+
+    var z = document.getElementById("audiofile2");
+
+    function playAudio2() {
+        z.play();
+    }
+
+    function pauseAudio() {
+        z.pause();
+    }
+</script>
+
+
+<!-- SCRIPTS -->
+<script type="text/javascript " src="../js/jquery-3.4.1.min.js "></script>
+<script type="text/javascript " src="../js/popper.min.js "></script>
+<script type="text/javascript " src="../js/bootstrap.min.js "></script>
+<script type="text/javascript " src="../js/mdb.min.js "></script>
+<script type="text/javascript" src="../js/jogo.js"></script>
+
+
+</body>
+
+</html>

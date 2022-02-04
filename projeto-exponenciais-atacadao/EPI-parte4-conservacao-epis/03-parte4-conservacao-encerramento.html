@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EPI - Conservação - Encerramento </title>
+    <link rel="icon shortcut" type="image/x-icon" href="https://www.atacadao.com.br/static/images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/effecthover.css" rel="stylesheet">
+    <link href="../css/typewrite.css" rel="stylesheet">
+    <link href="../css/style-css.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="conservacao-intro-bg-base">
+        <br><br><br><br><br><br>
+        <div class=" container ">
+
+            <div class="row justify-content-md-center">
+                <div class=" col-lg-12 col-md-12 col-sm-10 mt-4 mt-5 txt-risco text-texto fsize-72 text-white text-center animated fadeOut delay-3s">
+                    <br><br> Conservação dos EPI's<br>
+
+
+                </div>
+            </div>
+            <br>
+            <p class="text-texto fsize-24 text-white text-center">Você será redirecionado para o Menu em <span id="countdown">5</span> segundos</p>
+
+
+
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+
+
+
+
+
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript">
+        // Total seconds to wait
+        var seconds = 6;
+
+        function countdown() {
+            seconds = seconds - 1;
+            if (seconds < 0) {
+                // Chnage your redirection link here
+                window.location = "../index.html";
+            } else {
+                // Update remaining seconds
+                document.getElementById("countdown").innerHTML = seconds;
+                // Count down using javascript
+                window.setTimeout("countdown()", 1000);
+            }
+        }
+
+        // Run countdown function
+        countdown();
+    </script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+</body>
+
+</html>

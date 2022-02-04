@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EPI - Controle de Acesso - Regras </title>
+    <link rel="icon shortcut" type="image/x-icon" href="https://www.atacadao.com.br/static/images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/effecthover.css" rel="stylesheet">
+    <link href="../css/typewrite.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="topc8ass2-jogo animated fadeIn delay-05s">
+
+        <container>
+
+
+
+
+
+            <div class="row justify-content-md-center mb-5 text-center">
+                <div class=" col-lg-10 col-md-6  mt-4 ">
+                    <audio id="audiofile">
+                                        <source src="../audio/E64-65.mp3" type="audio/mp3">                                    
+                                    </audio>
+                    <button onclick="myFunction() , playAudio()" class=" btn border border-success fsize-28 text-texto text-white text-center">Clique Aqui <i class="fas fa-arrow-down "></i></button>
+                    <div id="myDIV">
+                        <p class="fsize-38 text-white text-style-base text-center animated fadeIn delay-05s">Para explicarmos o tema "Controle de Acesso as Câmaras Frias", criamos um jogo que facilitará seu entendimento sobre este tema. </p>
+                        <p class="fsize-38 text-white text-style-base text-center animated fadeIn delay-7s">Vamos conhecer as Regras do Jogo:</p>
+                        <audio id="audiofile1">
+                                <source src="../audio/E66-74.mp3" type="audio/mp3">                                    
+                            </audio>
+                        <button onclick="playAudio1(), myFunction1(), myFunction2(), myFunction3(), myFunction4(), myFunction5(), myFunction6(), myFunction7()" class=" btn border border-success fsize-28 text-texto text-white text-center">Clique Aqui para conhecer as Regras do Jogo: <i class="fas fa-arrow-down "></i></button>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center align-items-center">
+
+                <div class="col-lg-6 col-md-12 col-sm-5 mt-4 text-texto fsize-28 colorwhite ">
+                    <div id="myDIV1">
+                        <p class="text-left">1. Você será representado na tela por um personagem;</p>
+                    </div>
+                    <div class="row justify-content-md-center align-items-center">
+                        <div class="col-lg-12 ">
+                            <div id="myDIV2">
+                                <p class="text-left">2. Você deverá clicar no local indicado na tela para <br>responder as questões sobre o tema;</p>
+                            </div>
+                        </div>
+                        <div id="myDIV3">
+                            <div class="col-lg-12">
+
+                                <p class="text-left">3. Ao acertar a resposta você poderá avançar no jogo;</p>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="myDIV4">
+                                    <p class="text-left">4. A cada resposta que acertar na primeira tentativa <br>você ganhará 5 pontos;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="myDIV5">
+                                    <p class="text-left">5. Caso você acerte a resposta na segunda tentativa <br>você ganhará 2 pontos;</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="myDIV6">
+                                    <p class="text-left">6. A imagem da tela que representa o tabuleiro é uma foto <br>da PLANTA DO MAPA DE RISCO das Câmaras Frias;<img src="../img/svg/fundo-btn-regras.png" alt=""></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="myDIV7">
+                                    <p class="text-left">7. No final do jogo aparecerá a sua pontuação na tela.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4 justify-content-md-center text-center">
+                    <button class="btn  border border-white rounded fsize-28"> <img src="../img/alteracao/mascote game.png" class="max-width200"> </button>
+
+
+                    <div class="row justify-content-md-center">
+                        <div class="col-lg-12 justify-content-md-center text-center">
+                            <button class="btn border"><img src="../img/background/mapa de risco game.jpg" class="max-width400"></button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <br><br><br><br>
+            <div class="row">
+                <div class="col-lg-12 text-center"><br><br>
+                    <a href="../EPI-parte6-controle-acesso/03-parte6-controle-fase1.html" class="btn btn-success border border-white fsize-42 text-white text-texto text-center ">Clique aqui<p class="text-center">para iniciar o jogo!</p> </a>
+                    <br><br><br><br>
+                </div>
+
+            </div>
+
+
+        </container>
+
+
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function myFunction1() {
+                var x = document.getElementById("myDIV1");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function myFunction2() {
+                var x = document.getElementById("myDIV2");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function myFunction3() {
+                var x = document.getElementById("myDIV3");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+        <script>
+            function myFunction4() {
+                var x = document.getElementById("myDIV4");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function myFunction5() {
+                var x = document.getElementById("myDIV5");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function myFunction6() {
+                var x = document.getElementById("myDIV6");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+            function myFunction7() {
+                var x = document.getElementById("myDIV7");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+        <script>
+            var x = document.getElementById("audiofile");
+
+            function playAudio() {
+                x.play();
+            }
+
+            function pauseAudio() {
+                x.pause();
+            }
+
+
+
+            var y = document.getElementById("audiofile1");
+
+            function playAudio1() {
+                y.play();
+            }
+
+            function pauseAudio() {
+                y.pause();
+            }
+
+
+            var z = document.getElementById("audiofile2");
+
+            function playAudio2() {
+                z.play();
+            }
+
+            function pauseAudio() {
+                z.pause();
+            }
+        </script>
+
+
+
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="../js/popper.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/mdb.min.js"></script>
+</body>
+
+</html>

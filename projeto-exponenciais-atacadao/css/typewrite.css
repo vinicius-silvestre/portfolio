@@ -1,0 +1,137 @@
+.css-typing p {
+    border-right: .15em solid rgb(245, 163, 0);
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: -8px;
+}
+
+.css-typing p:nth-child(1) {
+    width: 34em;
+    opacity: 0;
+    -webkit-animation: type2 6s steps(80, end);
+    animation: type2 6s steps(80, end);
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+    width: 30em;
+    opacity: 0;
+    -webkit-animation: type2 6s steps(80, end);
+    animation: type2 6s steps(80, end);
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+    width: 34em;
+    opacity: 0;
+    -webkit-animation: type3 6s steps(80, end);
+    animation: type3 6s steps(80, end);
+    -webkit-animation-delay: 16s;
+    animation-delay: 16s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+
+/* TOPC2ASS1CLIQUE*/
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        border: none;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid orange;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes type3 {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: tranparent;
+    }
+}

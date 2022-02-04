@@ -1,0 +1,106 @@
+/* CSS DIEGO */
+/* Jogo certo/errado */
+
+
+.topc6game1 {
+    background-image: url('../img/background/bg-jogoce.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8game1 {
+    background-image: url('../img/background/bg-jogoce.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gridjogo1{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    
+}
+
+
+
+
+.colorred {
+    color:red;
+}
+
+.risco-inicio {
+    background-image: url('../img/background/back-intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.risco-tela01 {
+    background-image: url('../img/background/riscoambiental.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.fsize-41 {
+    font-size: 41px;
+}
+
+.fsize-22 {
+    font-size: 22px;
+}
+
+.fsize-30 {
+    font-size: 30px;
+}
+
+.fsize-28 {
+    font-size: 27px;
+}
+
+.img-itens {
+    margin-left: 20px;
+    max-width:350px;
+    max-height:450px;
+    width: auto;
+    height: auto;
+}
+
+.espaco-tela{
+    margin-top: 250px;
+}
+
+.max-width2001{
+    max-width: 400px;
+    margin-left: 280px;
+    margin-top: 300px;
+  }
+
+.txt-button{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.topc8ass1{
+    background-image: url('../img/background/Topc8Ass1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.input-dominio {
+    width: 20px;;
+    height: 25px;  
+   }
+
+   .responsabilidade {
+    background-image: url('../img/background/responsabilidade.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   .responsabilidade-jogo {
+    background-image: url('../img/background/menu-cursos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }

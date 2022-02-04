@@ -1,0 +1,907 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.text-style-base {
+    font-family: 'Berlin Sans FB', 'Courier New', Courier, monospace;
+}
+
+.text-style-escrita {
+    font-family: 'la petite', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-texto {
+    font-family: 'Raleway', 'Raleway', sans-serif;
+}
+
+.tm-23 {
+    font-size: 23px;
+}
+
+.menubox {
+    background-image: url('../img/background/304659.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.topc2ass1 {
+    background-image: url('../img/background/topc2ass1fundo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc2ass1clique {
+    background-image: url('../img/background/Topc2Ass1Clique.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc3ass1 {
+    background-image: url('../img/background/gray-geometric-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc6ass1game {
+    background-image: url('../img/background/Jogo_certo_errado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.topc6ass1 {
+    background-image: url('../img/background/Topc6Ass1e2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc6ass1q {
+    background-image: url('../img/background/topc6ass1q.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc6ass2c {
+    background-image: url('../img/background/topc6ass2c.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc6ass2o {
+    background-image: url('../img/background/Topc6Ass2clique.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc7ass1 {
+    background-image: url('../img/background/_MAPA\ DE\ RISCO.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8ass1a3 {
+    background-image: url('../img/background/Topc8Ass1a3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8ass1 {
+    background-image: url('../img/background/Topc8Ass1clique.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8ass3 {
+    background-image: url('../img/background/Topc8Ass4Clique1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.risco-inicio {
+    background-image: url('../img/background/back-intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc3ass1-clique {
+    background-image: url('../img/background/top3ass1-clique.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc3ass3-bg {
+    background-image: url('../img/background/topc3ass3-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ambientes-bg {
+    background-image: url('../img/background/ambientes-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8ass1a4-bg {
+    background-image: url('../img/background/Topc8Ass1a3-func.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8ass2-jogo {
+    background-image: url('../img/background/topc8ass2-jogo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topc8ass4 {
+    background-image: url('../img/background/punicao.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.riscoambiental-bg {
+    background-image: url('../img/alteracao/back-riscoambientaefisico.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.riscoambiental-bg-base {
+    background-image: url('../img/alteracao/risco-ambiental-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.riscofisico-bg-base {
+    background-image: url('../img/alteracao/risco-fisico-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introgreen-bg-base {
+    background-image: url('../img/alteracao/introteste-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introepi-bg-base {
+    background-image: url('../img/alteracao/intro-epi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conservacao-bg-base {
+    background-image: url('../img/alteracao/bg-conservacao.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conservacao-intro-bg-base {
+    background-image: url('../img/alteracao/conservacao-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.atuacao-intro-bg-base {
+    background-image: url('../img/alteracao/intro-atuacao.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-bg-risco {
+    background-image: url('../img/alteracao/intro-bg-risco.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-higien-bg {
+    background-image: url('../img/alteracao/intro-higien.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-gameacesso-bg {
+    background-image: url('../img/alteracao/intro-gameregistro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-epi-bg {
+    background-image: url('../img/alteracao/intro-epi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-jogodoconhec-bg {
+    background-image: url('../img/alteracao/intro-jogodoconhec.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-jogodoconhec-final-bg {
+    background-image: url('../img/alteracao/intro-jogofinal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-ambientes-bg {
+    background-image: url('../img/alteracao/intro-ambientes.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-ambientes2-bg {
+    background-image: url('../img/alteracao/intro-ambientes2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-ambientes0-bg {
+    background-image: url('../img/alteracao/intro-epi1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fundobtn {
+    background-image: url('../img/alteracao/intro-epi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fundobtn1 {
+    background-image: url('../img/alteracao/intro-bg-risco.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fundobtn2 {
+    background-image: url('../img/alteracao/intro-epi1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fundobtn3 {
+    background-image: url('../img/alteracao/conservacao-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fundobtn4 {
+    background-image: url('../img/alteracao/intro-higien.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.fundobtn5 {
+    background-image: url('../img/alteracao/intro-gameregistro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.fundobtn6 {
+    background-image: url('../img/alteracao/intro-atuacao.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fundobtn7 {
+    background-image: url('../img/background/Topc8Ass1clique.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fundobtn8 {
+    background-image: url('../img/background/Topc8Ass1clique.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.fundobtn9 {
+    background-image: url('../img/background/especialista.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.fundobtn10 {
+    background-image: url('../img/background/ambientes-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.fundobtn11 {
+    background-image: url('../img/background/rev-digital.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.intro-jogo-certo {
+    background-image: url('../img/background/intro_Jogo_certo_errado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.animated.delay-21s {
+    -webkit-animation-delay: 21s;
+    animation-delay: 21s;
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
+
+
+
+.fsize-72 {
+    font-size: 72px;
+}
+
+.fsize-32 {
+    font-size: 32px;
+}
+
+.fsize-18 {
+    font-size: 18px;
+}
+
+.fsize-38 {
+    font-size: 38px;
+}
+
+.fsize-49 {
+    font-size: 38px;
+}
+
+.fsize-28 {
+    font-size: 28px;
+}
+
+.fsize-42 {
+    font-size: 42px;
+}
+
+.fsize-50 {
+    font-size: 50px;
+}
+
+.fsize-24 {
+    font-size: 24px;
+}
+
+.fsize-20 {
+    font-size: 20px;
+}
+
+.colorwhite {
+    color: white;
+}
+
+.colorgray1 {
+    color: rgb(170, 170, 170);
+}
+
+.colorgray {
+    color: rgb(75, 75, 75);
+}
+
+.colorgreen {
+    color: rgb(0, 255, 162);
+}
+
+.colordeepgreen {
+    color: #0F5257;
+}
+
+.colorwhiteblue {
+    color: rgb(0, 53, 151);
+}
+
+.coloratention {
+    color: rgb(255, 0, 0);
+}
+
+.colororange {
+    color: rgb(255, 136, 0);
+}
+
+.shadowconsec {
+    text-shadow: 2px 2px 4px rgb(0, 166, 255);
+}
+
+.fa-exclamation {
+    color: rgb(238, 255, 0);
+}
+
+.fa-check-circle {
+    color: rgb(255, 255, 255);
+}
+
+.a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.a:link {
+    color: rgb(255, 0, 0);
+}
+
+.tooltip-red {
+    --balloon-color: red;
+}
+
+.tooltip-big-text {
+    --balloon-font-size: 14px;
+}
+
+.tooltip-big-text1 {
+    --balloon-font-size: 22px;
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.max-width400 {
+    max-width: 400px;
+}
+
+.max-width350 {
+    max-width: 350px;
+}
+
+.max-width300 {
+    max-width: 300px;
+}
+
+.max-width350 {
+    max-width: 350px;
+}
+
+.max-width200 {
+    max-width: 200px;
+}
+
+.max-width100 {
+    max-width: 100px;
+}
+
+.max-width50 {
+    max-width: 50px;
+}
+
+.orange-atac-gradient {
+    background: linear-gradient(40deg, #f5be49, #26fd26) !important;
+}
+
+
+
+
+
+
+
+.menucurso {
+    background-image: url('../img/background/tela-menu-curso.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   .hidden{
+    display : none;
+    }
+
+    .text-item{
+        position: absolute;
+        left: center;
+        right: center;
+        bottom: 50px;
+        z-index: 10;
+        padding-top: 80px;
+
+        padding-left:10px ;
+        font-size: 50px;
+        text-align: center;
+        text-shadow: 2px 2px 4px#ffffffff;
+
+    }
+
+    .zoom{
+        overflow: hidden;
+        max-width: 100%;
+        -moz-transition: all 0,3s;
+        -webkit-transition: all 0,3s;
+        transition: all 0,3;
+
+    }
+
+    .zoom:hover {
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+
+    #myDIV {
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: none;
+        
+     }
+
+     #myDIV1 {
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: none;
+        
+     }
+
+     #myDIV2 {
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: none;
+        
+     }
+
+
+     #myDIV3 {
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: none;
+        
+     }
+
+
+     html,
+body,
+header,
+.view {
+    height: 100%;
+}
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 600px;
+    }
+}
+
+@media (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 600px;
+    }
+}
+
+.btn .fa {
+    margin-left: 3px;
+}
+
+.top-nav-collapse {
+    background-color: #131313 !important;
+}
+
+.hovereffect {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #9142b0;
+}
+
+.hovereffect .overlayx {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.hovereffect h2 {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    overflow: hidden;
+    padding: 0.5em 0;
+    background-color: transparent;
+}
+
+.hovereffect h2:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.hovereffect:hover h2:after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.hovereffect a,
+.hovereffect p {
+    color: #FFF;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.hovereffect:hover a,
+.hovereffect:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 997px) {
+    html,
+    body,
+    header,
+    .view {
+        height: 800px;
+    }
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: #131313 !important;
+}
+
+.btn-white {
+    color: black !important;
+}
+
+h6 {
+    line-height: 1.7;
+}
+
+
+/*.rgba-gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
+*/
+
+.overlayk .mask {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
+}
+
+.overlayk .mask:hover {
+    opacity: 0.9;
+}
+
+.textoverlay {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*TESTE ELEMENTO HOVER*/
+
+.hovereffect {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: rgb(133, 95, 165);
+}
+
+.hovereffect .overlayx {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.hovereffect h2 {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    overflow: hidden;
+    padding: 0.5em 0;
+    background-color: transparent;
+}
+
+.hovereffect h2:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.hovereffect:hover h2:after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.hovereffect a,
+.hovereffect p {
+    margin-top: 10%;
+    font-weight: 100;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.hovereffect:hover a,
+.hovereffect:hover p {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+@media screen and (min-width: 200px) and (max-width:1291px) {
+    body {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .topc2ass1 {
+        background-image: url('../img/background/topc2ass1fundo1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .topc2ass1clique {
+        background-image: url('../img/background/gray-geometric-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: rgb(45, 108, 253);
+        background: linear-gradient(0deg, rgba(45, 108, 253, 1) 0%, rgba(35, 221, 223, 1) 100%);
+    }
+    .fsize-72 {
+        font-size: 50px;
+    }
+    .css-typing p {
+        border-right: .15em solid rgb(245, 163, 0);
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: -8px;
+        font-size: 18px;
+    }
+    .colorgray {
+        color: rgb(94, 91, 91);
+    }
+    .fsize-32 {
+        font-size: 22px;
+    }
+    .snip1273 h3 {
+        font-size: 12px;
+    }
+    .snip1273 p {
+        display: none;
+    }
+    .fsize-50 {
+        font-size: 30px;
+    }
+
+    .fsize-42 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width:576px) {
+    .fsize-72 {
+        font-size: 36px;
+    }
+    .fsize-50 {
+        font-size: 30px;
+    }
+}

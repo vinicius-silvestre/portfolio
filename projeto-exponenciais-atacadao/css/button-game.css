@@ -1,0 +1,224 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .title {
+    margin-top: 50px;
+    font-family: Arial;
+  font-size: 24px;
+    color: #fff;
+  }
+  
+  .cont_principal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  background: rgb(197,222,234);
+  background: -moz-linear-gradient(-45deg,  rgba(197,222,234,1) 0%, rgba(138,187,215,1) 31%, rgba(6,109,171,1) 100%);
+  background: -webkit-linear-gradient(-45deg,  rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%);
+  background: linear-gradient(135deg,  rgba(197,222,234,1) 0%,rgba(138,187,215,1) 31%,rgba(6,109,171,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 );
+  
+  }
+  .cont_centrar {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+  /*   background-color: #eee; */
+    top:50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -50px;
+    cursor: pointer;
+  }
+  
+  .texto_centro {
+    margin-top: 40px;
+    font-size: 20px;
+  font-weight: 800;
+    font-family: Arial;
+    color: #fff;
+  }
+  
+  .active_txt {
+  animation: text_anim 0.3s infinite  alternate;  
+  }
+  
+  #svg4174 {
+    position: absolute;
+    top:0px;
+    left: 0px;
+  }
+  .activebtn_fin   #rect4147 {  
+    transition: all 0.5s;
+        stroke-dashoffset: 0px; 
+    stroke-dasharray: 800px,800px;
+  }
+  .activebtn   #rect4147 {  
+  stroke-dashoffset: 800px; 
+    stroke-dasharray: 0px,800px;
+    transition: all 2s;
+    animation: dash_movimiento 15s 1 alternate;
+      -webkit-animation-timing-function: linear;   
+   animation-timing-function: linear;  
+  animation-delay: 2s;
+  }
+    #rect4147 {  
+     stroke-dashoffset: 0px; 
+    stroke-dasharray: 800px,800px;
+  
+  }
+  
+  
+  @-webkit-keyframes dash_movimiento {
+   0% { stroke-dashoffset: 800; 
+    stroke-dasharray: 0px;
+     }
+  
+     100% { 
+      stroke-dashoffset: 0px; 
+    stroke-dasharray: 800px,800px;
+    }
+  
+  }
+  @-o-keyframes dash_movimiento {
+   0% { stroke-dashoffset: 800; 
+    stroke-dasharray: 100px;
+     }
+  
+     100% { 
+      stroke-dashoffset: 0px; 
+    stroke-dasharray: 800px,800px;
+    }
+  
+  }
+  @-moz-keyframes dash_movimiento {
+   0% { stroke-dashoffset: 800; 
+    stroke-dasharray: 100px;
+     }
+  
+     100% { 
+      stroke-dashoffset: 0px; 
+    stroke-dasharray: 800px,800px;
+    }
+  }
+  @keyframes dash_movimiento {
+    0% {
+      stroke-dashoffset: 800px; 
+    stroke-dasharray:0px,800px;
+     }
+  
+     10% { 
+      stroke-dashoffset: 700px; 
+    stroke-dasharray:100px,800px;
+    }
+  
+     20% { 
+     stroke-dashoffset: 600px; 
+    stroke-dasharray:200px,800px;
+    }
+     30% { 
+     stroke-dashoffset: 500px; 
+    stroke-dasharray:300px,800px;
+    }
+    40% { 
+     stroke-dashoffset: 400px; 
+    stroke-dasharray:400px,800px; 
+    }
+     50% { 
+     stroke-dashoffset: 300px; 
+    stroke-dasharray:500px,800px;
+    }
+     60% { 
+     stroke-dashoffset: 200px; 
+    stroke-dasharray:600px,800px;
+    }
+     70% { 
+     stroke-dashoffset: 100px; 
+    stroke-dasharray:700px,800px;
+  
+    }
+     80% { 
+     stroke-dashoffset: 50px; 
+    stroke-dasharray:750px,800px;
+  
+    }
+     90% { 
+     stroke-dashoffset: 25px; 
+    stroke-dasharray:770px,800px;
+    }
+     100% { 
+      stroke-dashoffset: 0px; 
+    stroke-dasharray: 800px,800px;
+    }
+   
+  }
+  
+  
+  @-webkit-keyframes text_anim {
+   0% {
+     transform: scale(1);
+     }
+  
+     100% { 
+    transform: scale(1.05);
+    }
+  
+  }
+  @-o-keyframes text_anim {
+   0% {
+     transform: scale(1);
+     }
+  
+     100% { 
+    transform: scale(1.05);
+    }
+  
+  }
+  @-moz-keyframes text_anim {
+   0% {
+     transform: scale(1);
+     }
+  
+     100% { 
+    transform: scale(1.05);
+    }
+  }
+  @keyframes text_anim {
+    0% {
+      transform: scale(1);
+     }
+  
+     100% { 
+    transform: scale(1.05);
+    }
+   
+  }
+  
+  #path4138 {
+        stroke-dashoffset: 30px;
+      stroke-dasharray: 30px,30px;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .activebtn_fin #path4138 {
+        stroke-dashoffset: 0px;
+    transition-delay: 0.5s;
+  opacity: 1;
+  }
+  
+  .op_0 {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  
+    #svg2{
+    
+      position: absolute;
+      top: 33px;
+  }
+  
+  
+  

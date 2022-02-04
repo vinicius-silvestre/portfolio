@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EPI - Higienização - Jogo Certo e Errado</title>
+    <link rel="icon shortcut" type="image/x-icon" href="https://www.atacadao.com.br/static/images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/effecthover.css" rel="stylesheet">
+    <link href="../css/typewrite.css" rel="stylesheet">
+    <link href="../css/gallery.css" rel="stylesheet">
+    <link href="../css/jogo.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="topc6ass1game">
+
+        <container>
+
+            <div class="row justify-content-md-center justify-content-sm-center ">
+                <div class=" mt-4 col-md-8 col-sm-12 col-lg-12 text-style-base fsize-72 shadowconsec colorwhite animated jackInTheBox  delay-1s text-center">
+                    <p>Jogo : certo ou errado</p>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-md-center mb-5 text-center">
+                <div class=" col-lg-10 col-md-6  mt-4 ">
+                    <audio id="audiofile">
+                                <source src="../audio/E63.wav" type="audio/wav">                                    
+                            </audio>
+                    <audio id="audiofile1">
+                              <source src="../audio/bg-game.wav" type="audio/wav" >                                    
+                          </audio>
+                    <button onclick="myFunction() , playAudio(), playAudio1() , myFunction1(), myFunction2(), myFunction3()" class=" btn border border-success fsize-28 text-texto text-white text-center  animated fadeIn delay-05s">Clique Aqui <i class="fas fa-arrow-down "></i></button>
+                    <div id="myDIV">
+                        <p class="fsize-38 text-white text-style-base text-center animated fadeIn delay-1s">Escolha somente os EPI's da Câmara Fria, clique em cima do que é certo!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-md-center justify-content-sm-center ">
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center ">
+
+                    <div class="tada5">
+
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background:none;" id="button" onclick="showhide(), playAudio3()"><img src="../img/jogocertoerrado/botas.png"></button>
+                        <div id="newpost" class="text-item hidden justify-content-md-center justify-content-lg-center  shadowconsec active text-style-base fsize-32">
+                            <i class="fas fa-check fa-3x animated fadeIn delay-05s " style="color: green;"></i> <br>
+                            <p class=" fsize-24 animated fadeIn delay-05s" style="color: green;">Este item é um EPI adequado para Câmara Fria </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+                    <div class="shake1">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide1()"><img src="../img/jogocertoerrado/bone.png"></button>
+                        <div id="newpost1" class="text-item hidden justify-content-md-center justify-content-lg-center shadowconsec active  text-style-base fsize-32">
+                            <i class="fas fa-times fa-3x animated fadeIn delay-05s" style="color: red;"></i><br>
+                            <p class="fsize-24 animated fadeIn delay-05s" style="color: red;">Este item não é um EPI adequado para Câmara Fria</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+                    <div class="tada4">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide6()"><img src="../img/jogocertoerrado/balaclava.png"></button>
+                        <div id="newpost6" class="text-item hidden justify-content-md-center justify-content-lg-center shadowconsec active text-style-base fsize-32 fadeIn delay-2s">
+                            <i class="fas fa-check fa-3x animated fadeIn delay-05s " style="color: green;"></i> <br>
+                            <p class=" fsize-24 animated fadeIn delay-05s" style="color: green;">Este item é um EPI adequado para Câmara Fria </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+                    <div class="shake2">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide3()"><img src="../img/jogocertoerrado/cachecol.png"></button>
+                        <div id="newpost3" class="text-item hidden justify-content-md-center justify-content-lg-center shadowconsec active  text-style-base fsize-32 fadeIn delay-2s">
+                            <i class="fas fa-times fa-3x animated fadeIn delay-05s" style="color: red;"></i><br>
+                            <p class="fsize-24 animated fadeIn delay-05s" style="color: red;">Este item não é um EPI adequado para Câmara Fria</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br><br>
+            <div class="row justify-content-md-center justify-content-sm-center">
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+                    <div class="tada3">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide4()"><img src="../img/jogocertoerrado/luvas.png"></button>
+                        <div id="newpost4" class="text-item hidden justify-content-md-center justify-content-lg-center  shadowconsec active text-style-base fsize-32 fadeIn delay-2s">
+                            <i class="fas fa-check fa-3x animated fadeIn delay-05s " style="color: green;"></i> <br>
+                            <p class=" fsize-24 animated fadeIn delay-05s" style="color: green;">Este item é um EPI adequado para Câmara Fria </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+
+                    <div class="tada2">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide5()"><img src="../img/jogocertoerrado/calcas.png"></button>
+                        <div id="newpost5" class="text-item hidden justify-content-md-center justify-content-lg-center shadowconsec active text-style-base fsize-32 fadeIn delay-2s">
+                            <i class="fas fa-check fa-3x animated fadeIn delay-05s " style="color: green;"></i> <br>
+                            <p class=" fsize-24 animated fadeIn delay-05s" style="color: green;">Este item é um EPI adequado para Câmara Fria </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+                    <div class="shake3">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide2()"><img src="../img/jogocertoerrado/mochila.png"> <id="newpost2"  class="hidden justify-content-md-center justify-content-lg-center  text-style-base fsize-32 fadeIn delay-2s"></button>
+
+                        <div id="newpost2" class="text-item hidden justify-content-md-center justify-content-lg-center shadowconsec active  text-style-base fsize-32 fadeIn delay-2s">
+                            <i class="fas fa-times fa-3x animated fadeIn delay-8s" style="color: red;"></i><br>
+                            <p class="fsize-24 animated fadeIn delay-05s" style="color: red;">Este item não é um EPI adequado para Câmara Fria</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-12 text-center">
+                    <div class="tada1">
+                        <button class="colorwhite animated fadeIn delay-3s" style="position: center; border: none; background: none;" id="button" onclick="showhide7()"><img src="../img/jogocertoerrado/japona.png"></button>
+                        <div id="newpost7" class="text-item hidden justify-content-md-center justify-content-lg-center shadowconsec active text-style-base fsize-32 fadeIn delay-2s">
+                            <i class="fas fa-check fa-3x animated fadeIn delay-8s " style="color: green;"></i> <br>
+                            <p class=" fsize-24 animated fadeIn delay-05s" style="color: green;">Este item é um EPI adequado para Câmara Fria </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <br><br>
+            <div class="row">
+                <div class="col-lg-11 text-right">
+                    <a href="../EPI-parte5-higienizacao-epis/09-parte5-higienizacao-encerramento-jogo.html" class="fsize-32 text-style-base text-right hvr-icon-wobble-horizontal text-white "> Avançar &nbsp;<i
+                    class="fas fa-arrow-right hvr-icon "></i> </a>
+
+
+                    <p id="text" style="display:none">Checkbox is CHECKED!</p>
+                </div>
+            </div>
+
+    </div>
+
+
+    </container>
+
+    </div>
+</body>
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+
+
+    function myFunction1() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+
+    function myFunction2() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    function myFunction3() {
+        var x = document.getElementById("myDIV3");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
+    function myFunction4() {
+        var x = document.getElementById("myDIV4");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<script>
+    var x = document.getElementById("audiofile");
+
+    function playAudio() {
+        x.play();
+    }
+
+    function pauseAudio() {
+        x.pause();
+    }
+
+
+
+    var y = document.getElementById("audiofile1");
+
+    function playAudio1() {
+        y.play();
+    }
+
+    function pauseAudio() {
+        y.pause();
+    }
+
+
+    var z = document.getElementById("audiofile2");
+
+    function playAudio2() {
+        z.play();
+    }
+
+    function pauseAudio() {
+        z.pause();
+    }
+
+    var k = document.getElementById("audiofile3");
+
+    function playAudio3() {
+        k.play();
+    }
+
+    function pauseAudio() {
+        k.pause();
+    }
+</script>
+
+
+<!-- SCRIPTS -->
+<script type="text/javascript " src="../js/jquery-3.4.1.min.js "></script>
+<script type="text/javascript " src="../js/popper.min.js "></script>
+<script type="text/javascript " src="../js/bootstrap.min.js "></script>
+<script type="text/javascript " src="../js/mdb.min.js "></script>
+<script type="text/javascript" src="../js/jogo.js"></script>
+<script>
+    function showhide() {
+        var div = document.getElementById("newpost");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+    }
+
+    function showhide1() {
+        var div = document.getElementById("newpost1");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+    }
+
+
+    function showhide2() {
+        var div = document.getElementById("newpost2");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+
+    }
+
+    function showhide3() {
+        var div = document.getElementById("newpost3");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+    }
+
+    function showhide4() {
+        visiblie = true
+        var div = document.getElementById("newpost4");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+    }
+
+    function showhide5() {
+        var div = document.getElementById("newpost5");
+        div.classList.toggle('hidden');
+    }
+
+    function showhide6() {
+        var div = document.getElementById("newpost6");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+    }
+
+    function showhide7() {
+        var div = document.getElementById("newpost7");
+        div.classList.toggle('hidden');
+        $(this).tab('show')
+    }
+
+
+    function myCheckButton() {
+        var checkBox = document.getElementById("myCheck");
+        var text = document.getElementById("text");
+        if (showhide, showhide6, showhide4, showhide5, showhide7 == 'show') {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+    }
+
+
+
+    $(document).ready(function() {
+
+
+        animationClick('.shake1', 'shake');
+        animationClick('.shake2', 'shake');
+        animationClick('.shake3', 'shake');
+
+        animationClick('.tada1', 'tada');
+        animationClick('.tada2', 'tada');
+        animationClick('.tada3', 'tada');
+        animationClick('.tada4', 'tada');
+        animationClick('.tada5', 'tada');
+
+        animationClick('.swing1', 'swing');
+        animationClick('.wobble1', 'wobble');
+        animationClick('.bounceIn1', 'bounceIn');
+        animationClick('.bounceInDown1', 'bounceInDown');
+        animationClick('.bounceInLeft1', 'bounceInLeft');
+        animationClick('.bounceInRight1', 'bounceInRight');
+        animationClick('.bounceInUp1', 'bounceInUp');
+        animationClick('.bounceOut1', 'bounceOut');
+        animationClick('.bounceOutDown1', 'bounceOutDown');
+        animationClick('.bounceOutLeft1', 'bounceOutLeft');
+        animationClick('.bounceOutRight1', 'bounceOutRight');
+        animationClick('.bounceOutUp1', 'bounceOutUp');
+        animationClick('.fadeIn1', 'fadeIn');
+        animationClick('.fadeInDown1', 'fadeInDown');
+        animationClick('.fadeInDownBig1', 'fadeInDownBig');
+        animationClick('.fadeInLeft1', 'fadeInLeft');
+        animationClick('.fadeInLeftBig1', 'fadeInLeftBig');
+        animationClick('.fadeInRight1', 'fadeInRight');
+        animationClick('.fadeInRightBig1', 'fadeInRightBig');
+        animationClick('.fadeInUp1', 'fadeInUp');
+        animationClick('.fadeInUpBig1', 'fadeInUpBig');
+        animationClick('.fadeOut1', 'fadeOut');
+
+        animationClick('.fadeOutDown1', 'fadeOutDown');
+        animationClick('.fadeOutDownBig1', 'fadeOutDownBig');
+        animationClick('.fadeOutLeft1', 'fadeOutLeft');
+        animationClick('.fadeOutLeftBig1', 'fadeOutLeftBig');
+        animationClick('.fadeOutRight1', 'fadeOutRight');
+        animationClick('.fadeOutRightBig1', 'fadeOutRightBig');
+        animationClick('.fadeOutUp1', 'fadeOutUp');
+        animationClick('.fadeOutUpBig1', 'fadeOutUpBig');
+        animationClick('.flipInX1', 'flipInX');
+
+
+        function animationHover(element, animation) {
+            element = $(element);
+            element.hover(
+                function() {
+                    element.addClass('animated ' + animation);
+                },
+                function() {
+                    //wait for animation to finish before removing classes
+                    window.setTimeout(function() {
+                        element.removeClass('animated ' + animation);
+                    }, 2000);
+                }
+            );
+        };
+
+        function animationClick(element, animation) {
+            element = $(element);
+            element.click(
+                function() {
+                    element.addClass('animated ' + animation);
+                    //wait for animation to finish before removing classes
+                    window.setTimeout(function() {
+                        element.removeClass('animated ' + animation);
+                    }, 2000);
+                }
+            );
+        };
+
+
+    });
+</script>
+
+</body>
+
+</html>
