@@ -1,0 +1,279 @@
+                    *::after {
+                        box-sizing: border-box;
+                    }
+                    
+                    .tm36 {
+                        font-size: 36px;
+                    }
+                    
+                    .tm70 {
+                        font-size: 70px;
+                    }
+                    
+                    .tm60 {
+                        font-size: 60px;
+                    }
+                    
+                    .tm50 {
+                        font-size: 50px;
+                    }
+                    
+                    .tm30 {
+                        font-size: 30px;
+                    }
+                    
+                    .tm28 {
+                        font-size: 28px;
+                    }
+                    
+                    .tm24 {
+                        font-size: 24px;
+                    }
+                    
+                    .tm18 {
+                        font-size: 18px;
+                    }
+                    
+                    .txt-thasadith {
+                        font-family: 'Thasadith', sans-serif;
+                    }
+                    
+                    .txt-pioret {
+                        font-family: 'Poiret One', cursive;
+                    }
+                    
+                    .txt-raleway {
+                        font-family: 'Raleway', sans-serif;
+                    }
+                    
+                    .txt-sura {
+                        font-family: 'Sura', serif;
+                    }
+                    
+                    .cl-85 {
+                        color: #858585;
+                    }
+                    
+                    .cl-ff {
+                        color: #ffffff;
+                    }
+                    
+                    .cl-a3 {
+                        color: #a3a3a3;
+                    }
+                    
+                    .cl-8b {
+                        color: #8b8b8b;
+                    }
+                    
+                    .cl-hr9b {
+                        color: #9b1cff;
+                    }
+                    
+                    .cl-hra0 {
+                        color: #a06ca4;
+                    }
+                    
+                    .cl-3e {
+                        color: #3e3e3e;
+                    }
+                    
+                    .cl-br8f {
+                        color: #cfcbcb;
+                    }
+                    
+                    .cl-3c {
+                        color: #3c3c3c;
+                    }
+                    
+                    .cl-4d {
+                        color: #4d4d4d;
+                    }
+                    
+                    .cl-00 {
+                        color: #000000;
+                    }
+                    
+                    .cl-9b {
+                        color: #9b9b9b;
+                    }
+                    
+                    .cl-13 {
+                        color: #131313;
+                    }
+                    
+                    .bg-cl {
+                        background-color: #2B2B2C;
+                    }
+                    
+                    .bg-cz {
+                        background-color: #131313;
+                    }
+                    
+                    #menu {
+                        margin: none;
+                        position: relative;
+                        font-family: 'Thasadith', sans-serif;
+                        font-size: 22px;
+                    }
+                    
+                    #menu ul {
+                        margin: none;
+                        background-color: #131313;
+                        list-style: none;
+                        border-bottom: 1px solid;
+                        border-bottom-color: #A06CA4;
+                        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+                    }
+                    
+                    #menu ul li {
+                        display: inline;
+                    }
+                    
+                    #menu ul li a {
+                        margin: 14px;
+                        padding: 8px 8px;
+                        display: inline-block;
+                        text-decoration: none;
+                    }
+                    
+                    #menu ul li a.vr {
+                        margin-left: 1%;
+                        border-left: 1px solid;
+                        vertical-align: middle;
+                        height: 10px;
+                        border-color: #A06CA4;
+                        color: #A06CA4;
+                    }
+                    
+                    #menu ul li a:hover {
+                        color: #A06CA4;
+                    }
+                    
+                    .offset-t {
+                        float: right;
+                        margin-right: 5%;
+                    }
+                    
+                    .offset-s {
+                        margin-left: 5%;
+                    }
+                    
+                    hr {
+                        margin-top: -10px;
+                        border-color: #A06CA4;
+                        color: #A06CA4;
+                    }
+                    
+                    .overlayk .mask {
+                        opacity: 0;
+                        transition: all 0.4s ease-in-out;
+                        background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
+                    }
+                    
+                    .overlayk .mask:hover {
+                        opacity: 0.9;
+                    }
+                    
+                    .textoverlay {
+                        color: white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                    /*TESTE ELEMENTO HOVER*/
+                    
+                    .hovereffect {
+                        float: left;
+                        overflow: hidden;
+                        position: relative;
+                        text-align: center;
+                        cursor: default;
+                        background: rgb(104, 245, 111);
+                    }
+                    
+                    .hovereffect .overlayx {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        overflow: hidden;
+                        top: 0;
+                        left: 0;
+                        padding: 50px 20px;
+                    }
+                    
+                    .hovereffect img {
+                        display: block;
+                        position: relative;
+                        max-width: none;
+                        width: calc(100% + 20px);
+                        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                        transition: opacity 0.35s, transform 0.35s;
+                        -webkit-transform: translate3d(-10px, 0, 0);
+                        transform: translate3d(-10px, 0, 0);
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                    }
+                    
+                    .hovereffect:hover img {
+                        opacity: 0.4;
+                        filter: alpha(opacity=40);
+                        -webkit-transform: translate3d(0, 0, 0);
+                        transform: translate3d(0, 0, 0);
+                    }
+                    
+                    .hovereffect h2 {
+                        font-weight: bold;
+                        font-family: 'Raleway', sans-serif;
+                        color: rgb(0, 0, 0);
+                        text-align: center;
+                        position: relative;
+                        font-size: 17px;
+                        overflow: hidden;
+                        padding: 0.5em 0;
+                        background-color: transparent;
+                    }
+                    
+                    .hovereffect h2:after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #0400f5;
+                        content: '';
+                        -webkit-transition: -webkit-transform 0.35s;
+                        transition: transform 0.35s;
+                        -webkit-transform: translate3d(-100%, 0, 0);
+                        transform: translate3d(-100%, 0, 0);
+                    }
+                    
+                    .hovereffect:hover h2:after {
+                        -webkit-transform: translate3d(0, 0, 0);
+                        transform: translate3d(0, 0, 0);
+                    }
+                    
+                    .hovereffect a,
+                    .hovereffect p {
+                        margin-top: 10%;
+                        font-family: 'Raleway', sans-serif;
+                        color: #ffffff;
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                        transition: opacity 0.35s, transform 0.35s;
+                        -webkit-transform: translate3d(100%, 0, 0);
+                        transform: translate3d(100%, 0, 0);
+                    }
+                    
+                    .hovereffect:hover a,
+                    .hovereffect:hover p {
+                        opacity: 1;
+                        filter: alpha(opacity=100);
+                        -webkit-transform: translate3d(0, 0, 0);
+                        transform: translate3d(0, 0, 0);
+                    }
