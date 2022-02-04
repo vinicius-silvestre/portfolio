@@ -1,0 +1,48 @@
+<!-- Large modal -->
+<div class="modal-header">
+    <h4 class="modal-title">Itens do Compra</h4>
+    <button type="button" class="close" data-dismiss="modal">×</button>
+</div>
+
+<div class="modal-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+                <div class="table-responsive border rounded">
+                    <table role="grid" class="table table-hover table-sm table-secundary">
+                        <thead scope="col" class="card-header">
+                            <tr>
+                                <th>Tecido</th>
+                                <th>Material</th>
+                                <th>Cor</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for detalhe in detalhes %}
+                            <tr>
+                                {% if detalhe.tecido == None %}
+                                <td>-</td>
+                                {% else %}
+                                <td>{{ detalhe.tecido }}</td>
+                                {% endif %}
+                                {% if detalhe.material == None %}
+                                <td>-</td>
+                                {% else %}
+                                <td>{{ detalhe.material }}</td>
+                                {% endif %}
+                                <td>{{ detalhe.cor }}</td>
+                                <td>{{ detalhe.quantidade }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary" href="">Sair</a>
+        </div>
+    </div>
+</div>

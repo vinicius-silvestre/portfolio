@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item">Confirmação de Exclusão</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <h3>Confirma a exclusão?</h3>
+                            <br />
+                            <p><i><b>Atenção!</b></i><br />
+                                Após a confirmação, essa exclusão não poderá ser desfeita e não poderá haver registro futuros com esses dados.</p>
+
+                            <div class="pull-right">
+                                <a href="/">
+                                    <input type="button" class="btn btn-danger btn-md" value="Não">
+                                </a>
+                                <input class="btn btn-success btn-md" type="submit" value="Sim" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

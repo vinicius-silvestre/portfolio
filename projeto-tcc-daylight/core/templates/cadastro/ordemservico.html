@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item">Cadastro</li>
+    <li class="breadcrumb-item active">Ordem de Serviço</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <h6 class="card-header">Adicionar Ordem de Serviço</h6>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="POST" autofocus>
+                            {% csrf_token %}
+
+
+                            <div class="form-row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="small">Selecionar Data de Serviço</label>
+                                            <input class="form-control small " type="date" size="100" id="nome_cliente" name="nome_cliente">
+                                        </div>
+                                    </div>
+                                
+        
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="servico-list" class="small">Selecionar Cod. do Pedido</label>
+                                            <select id="servico-list" class="form-control" style="font-family:'FontAwesome', Arial;" >
+                                                <option >-- Selecione --</option>
+                                                <option> 000199  </option>
+                                                <option> 000198 </option>
+                                                <option> 000197 </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="servico-list" class="small">Produto a ser Produzido</label>
+                                            <select id="servico-list" class="form-control" style="font-family:'FontAwesome', Arial;" >
+                                                <option >-- Selecione --</option>
+                                                <option> Avental </option>
+                                                <option> Camisa </option>
+                                                <option> Calça </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label for="servico-list" class="small">Selecionar Serviço</label>
+                                                <select id="servico-list" class="form-control" style="font-family:'FontAwesome', Arial;" >
+                                                    <option >-- Selecione --</option>
+                                                    <option> Costureira</option>
+                                                    <option> Design de Estampas </option>
+                                                    <option> Entregador </option>
+                                                    <option> Transportador </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label for="servico-list" class="small">Selecionar Prestador do Serviço</label>
+                                                        <select id="servico-list" class="form-control" style="font-family:'FontAwesome', Arial;" >
+                                                            <option >-- Selecione --</option>
+                                                            <option> Joao </option>
+                                                            <option> Maria </option>
+                                                            <option> Jose</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label class="small">Quantidade</label>
+                                        <input class="form-control small" type="text" size="100" id="nome_cliente" name="nome_cliente">
+                                                    </div>
+                                                </div>
+                                                </div>
+
+                                    <div class="form-row">
+                                        <div class="col-lg-9">
+                                            <div class="form-group">
+                                                <label for="comment" class="small">Descrição:</label>
+                                                <textarea class="form-control" rows="4" cols="800" id="comment"></textarea>
+                                            </div>
+                                        </div></div></div>
+        </form>
+    </form>                    
+</div>      
+
+
+                            <div class="pull-right">
+                
+                                <a href="/grupo/grupoordemservico"><input type="button" class="btn btn-danger btn-md" value="Cancelar"></a>
+                                <a href="{% url 'create_ordem_servico' %}"><input type="submit" class="btn btn-success btn-md" value="Salvar"></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+{% endblock %}

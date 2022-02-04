@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/">
+      <i class="fa fa-home fa-lg"></i>
+    </a>
+  </li>
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+
+
+<!-- CARDS -->
+<div class="row">
+
+{% if user.perfil == 'G' or user.perfil == 'V' %}
+  <div class="col-xl-3 col-sm-6 mb-3">
+    <div class="card text-white bg-papaya o-hidden h-80">
+      <div class="card-body">
+        <div class="card-body-icon">
+          <i class="fa fa-fw fa-exclamation"></i>
+        </div>
+        <div class="mr-5">{{ qtd_pedidos }} Pedidos</div>
+      </div>
+      <a class="card-footer text-white clearfix small z-1" href="/comercial/gerenciarpedido">
+        <span class="float-left">Detalhes</span>
+        <span class="float-right"><i class="fa fa-angle-right"></i></span>
+      </a>
+    </div>
+  </div>
+{% endif %}
+
+{% if user.perfil == 'G' %}
+  <div class="col-xl-3 col-sm-6 mb-3">
+    <div class="card text-white bg-mustard o-hidden h-80">
+      <div class="card-body">
+        <div class="card-body-icon">
+          <i class="fa fa-fw fa-shopping-cart"></i>
+        </div>
+        <div class="mr-5">{{ qtd_compras }} Compras</div>
+      </div>
+      <a class="card-footer text-white clearfix small z-1" href="/comercial/gerenciarcompra">
+        <span class="float-left">Detalhes</span>
+        <span class="float-right">
+          <i class="fa fa-angle-right"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+{% endif %}
+
+{% if user.perfil == 'G' or user.perfil == 'A' %}
+  <div class="col-xl-3 col-sm-6 mb-3">
+    <div class="card text-white bg-blush o-hidden h-80">
+      <div class="card-body">
+        <div class="card-body-icon">
+          <i class="fa fa-fw fa-scissors"></i>
+        </div>
+        <div class="mr-5">{{ qtd_servicos }} Serviços</div>
+      </div>
+      <a class="card-footer text-white clearfix small z-1" href="/producao/gerenciarservico">
+        <span class="float-left">Detalhes</span>
+        <span class="float-right">
+          <i class="fa fa-angle-right"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+{% endif %}
+
+  <div class="col-xl-3 col-sm-6 mb-3">
+    <div class="card text-white bg-aqua o-hidden h-80">
+      <div class="card-body">
+        <div class="card-body-icon">
+          <i class="fa fa-fw fa-car"></i>
+        </div>
+        <div class="mr-5">{{ qtd_expedicao }} Entregas</div>
+      </div>
+      <a class="card-footer text-white clearfix small z-1" href="/expedicao">
+        <span class="float-left">Detalhes</span>
+        <span class="float-right">
+          <i class="fa fa-angle-right"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<br />
+
+<div class="row">
+
+  <!-- CALENDARIO-->
+  <div class="col-xl-4 col-sm-6 mb-3" id="calendar">
+    <div class="bg-light card o-hidden h-100">
+        <br />
+      <div class="">
+        <div id="date-popover">
+          <h6 class="popover-title small"></h6>
+          <div id="date-popover-content" class="popover-content small"></div>
+        </div>
+        <div id="my-calendar"></div>
+      </div>
+    </div>
+  </div>
+
+<br />
+
+  <!--  WEATHER PANEL -->
+  <div class="col-xl-4 col-sm-6 mb-3 text-center">
+    <div class="card bg-light o-hidden h-100">
+    <br />
+    <br />
+      <div class="card-body">
+      {% if icone_previsao == None %}
+        <img class="w-50" src="static/img/weather.jpg">
+      {% else %}
+        <img class="" src="static/realistic/{{ icone_previsao }}.png">
+      {% endif %}
+        <br />
+        <br />
+        {% if cidade == None %}
+            <h2 class="card-title">Osasco</h2>
+        {% else %}
+            <h2 class="card-title">{{ cidade }}</h2>
+        {% endif %}
+        {% if temperatura == None %}
+            <h4 class="card-text">0 Cº</h4>
+        {% else %}
+            <h4 class="card-text">{{ temperatura }} Cº</h4>
+        {% endif %}
+        {% if clima == None %}
+            Previsão indefinida
+        {% else %}
+            Previsão de {{ clima }}
+        {% endif %}
+        <p class="card-text"><small class="text-muted">{{ data_agora }}</small></p>
+      </div>
+    </div>
+  </div>
+
+<br />
+
+  <!--  PROFILE PANEL -->
+  <div class="col-xl-4 col-sm-6 mb-3 text-center">
+    <div class="card bg-light">
+      <img class="card-img-top" src="{% static 'img/siteaquarela.png' %}">
+      <div class="card-body bg-light">
+        <a href="https://www.aquarelauniformes.com.br/"><i class="fa fas fa-globe fa-2x"></i></a>
+      </div>
+    </div>
+    <br />
+    <div class="card bg-light">
+      <img class="card-img-top" src="{% static 'img/facebookaquarela.png' %}">
+      <div class="card-body bg-light">
+        <a href="https://www.facebook.com/aquarelauniforme/"><i class="fa fa-facebook fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<br />
+{% endblock %}

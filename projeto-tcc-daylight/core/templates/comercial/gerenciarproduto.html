@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Gerenciar Produto</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="/comercial/cadastrarproduto"><button class="btn btn-primary btn-sm pull-right">Novo Produto</button></a>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-12 col-sm-12">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <div class="form-row">
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Tipo de Produto</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="50" id="tipo_produto" name="tipo_produto">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Classificação</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="50" id="classificacao_produto" name="classificacao_produto">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Descrição do Produto</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="100" id="desc_produto" name="desc_produto">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pull-right">
+                                <a href="{% url 'list_produto' %}">
+                                    <button type="submit" class="btn btn-secundary btn-sm pull-right">Pesquisar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+        <div class="table-responsive border rounded">
+            <table role="grid" class="table table-hover table-sm table-secundary">
+                <thead scope="col" class="card-header">
+                    <tr>
+                        <th scope="col">Tipo de Produto</th>
+                        <th scope="col">Classificação</th>
+                        <th scope="col">Descrição do Produto</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Tamanho</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                {% for produto in lista_produto %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ produto.tipo_produto }}</th>
+                        <td>{{ produto.classificacao }}</td>
+                        <td>{{ produto.produto }}</td>
+                        <td>{% if produto.modelo == 'M' %}
+                            {{ 'Masculino' }}
+                            {% elif produto.modelo == 'F' %}
+                            {{ 'Feminino' }}</td>
+                            {% else %}
+                            {{ 'Unissex' }}
+                            {% endif %}
+                        <td>{{ produto.tamanho }}</td>
+
+                         {% if produto %}
+                        <td>
+                            <a href="{% url 'update_produto' produto.uuid %}">
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                            </a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

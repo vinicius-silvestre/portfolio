@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Gerenciar Compra</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="/comercial/registrarcompra"><button class="btn btn-primary btn-sm pull-right">Nova Compra</button></a>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-12 col-sm-12">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <div class="form-row">
+                                <div class="col-xl-2 col-sm-2 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Ordem de Compra</label>
+                                        <input class="form-control form-control-sm" type="number" size="50" id="ordemcompra" name="ordemcompra">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Data da Compra</label>
+                                        <input class="form-control form-control-sm" type="date" id="dtordemcompra" name="dtordemcompra">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Status</label>
+                                        <select class="form-control form-control-sm custom-select" id="status_compra" name="status_compra">
+                                            <option selected>--Selecione--</option>
+                                            <option value="Em andamento">Em andamento</option>
+                                            <option value="Finalizado">Finalizado</option>
+                                            <option value="Cancelado">Cancelado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-xl-8 col-sm-8 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Fornecedor</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="100" id="fornecedor" name="fornecedor">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pull-right">
+                                <a href="{% url 'list_compra' %}">
+                                    <button type="submit" class="btn btn-secundary btn-sm pull-right">Pesquisar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+        <div class="table-responsive border rounded">
+            <table role="grid" class="table table-hover table-sm table-secundary">
+                <thead scope="col" class="card-header">
+                    <tr>
+                        <th scope="col">OC</th>
+                        <th scope="col">Fornecedor</th>
+                        <th scope="col">Data de Compra</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                {% for compra in lista_compra %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ compra.numero_compra }}</th>
+                        <td>{{ compra.fornecedor }}</td>
+                        <td>{{ compra.data_compra|date:'d/m/Y' }}</td>
+                        <td>{{ compra.status }}</td>
+
+                        {% if compra %}
+                        <td>
+                            <a onclick="detalhesCompra('{{ compra.uuid }}')" data-toggle="modal" data-target="#modalCompra" data-remote="false">
+                                <button class="btn btn-secundary btn-sm">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </a>
+                            <a href="{% url 'update_compra' compra.uuid %}">
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                            </a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="containerCompra"></div>
+    </div>
+</div>
+{% endblock %}

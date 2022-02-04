@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Gerenciar Serviço</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="/producao/registrarservico"><button class="btn btn-primary btn-sm pull-right">Novo Serviço</button></a>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-12 col-sm-12">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <div class="form-row">
+                                <div class="col-xl-2 col-sm-2 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Ordem de Serviço</label>
+                                        <input class="form-control form-control-sm" type="number" size="50" id="numservico" name="numservico">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Data do Serviço</label>
+                                        <input class="form-control form-control-sm" type="date" id="dtservico" name="dtservico">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Status</label>
+                                        <select class="form-control form-control-sm custom-select" id="status_servico" name="status_servico">
+                                            <option selected>--Selecione--</option>
+                                            <option value="Em andamento">Em andamento</option>
+                                            <option value="Finalizado">Finalizado</option>
+                                            <option value="Cancelado">Cancelado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-xl-8 col-sm-8 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Prestador</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="100" id="prestador" name="prestador">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pull-right">
+                                <a href="{% url 'list_servico' %}">
+                                    <button type="submit" class="btn btn-secundary btn-sm pull-right">Pesquisar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+        <div class="table-responsive border rounded">
+            <table role="grid" class="table table-hover table-sm table-secundary">
+                <thead scope="col" class="card-header">
+                    <tr>
+                        <th scope="col">OS</th>
+                        <th scope="col">Pedido</th>
+                        <th scope="col">Prestador</th>
+                        <th scope="col">Dt Serviço</th>
+                        <th scope="col">Dt Entrega</th>
+                        <th scope="col">Serviço</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                {% for servico in lista_servico %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ servico.numero_servico }}</th>
+                        <th scope="row">{{ servico.numero_pedido }}</th>
+                        <td>{{ servico.prestador }}</td>
+                        <td>{{ servico.data_servico|date:'d/m/Y' }}</td>
+                        <td>{{ servico.data_entrega|date:'d/m/Y' }}</td>
+                        <td>{{ servico.servico }}</td>
+                        <td>{{ servico.status }}</td>
+
+                         {% if servico %}
+                        <td>
+                            <a onclick="detalhesServico('{{ servico.uuid }}')" data-toggle="modal" data-target="#modalServico" data-remote="false">
+                                <button class="btn btn-secundary btn-sm">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </a>
+                            <a href="{% url 'update_servico' servico.uuid %}">
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                            </a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<div class="modal fade" id="modalServico" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="containerServico"></div>
+    </div>
+</div>
+{% endblock %}

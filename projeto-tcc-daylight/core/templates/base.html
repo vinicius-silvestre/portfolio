@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>DayLight Manager System</title>
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
+  <!-- Bootstrap core CSS-->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/zabuto_calendar.css' %}" rel="stylesheet">
+  <link href="{% static 'css/sb-admin.css' %}" rel="stylesheet">
+  <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+
+  <!-- Pnotify -->
+  <link href="{% static 'pnotify/dist/pnotify.css' %}" rel="stylesheet">
+  <link href="{% static 'pnotify/dist/pnotify.buttons.css' %}" rel="stylesheet">
+  <link href="{% static 'pnotify/dist/pnotify.nonblock.css' %}" rel="stylesheet">
+
+  <!-- Custom Daylight CSS-->
+  <link href="{% static 'css/custom_daylight.css' %}" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+
+  {% for message in messages %}
+    {% if message.extra_tags == 'Erro' %}<div class="alert_message" data-title="{{ message.extra_tags }}" data-type="error" hidden>{{ message }}</div>
+    {% elif message.extra_tags == 'Sucesso' %}<div class="alert_message" data-title="{{ message.extra_tags }}" data-type="success" hidden>{{ message }}</div>
+    {% elif message.extra_tags == 'Informação' %}<div class="alert_message" data-title="{{ message.extra_tags }}" data-type="warning" hidden>{{ message }}</div>
+    {% endif %}
+  {% endfor %}
+
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+
+    <img class="" src="{% static 'img/logo.png' %}">
+    <a class="navbar-brand" id="nome_empresa">Aquarela Uniformes</a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+    <nav class="collapse navbar-collapse" id="navbarResponsive">
+
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav navbar-sidenav" id="menu">
+
+        <!-- ITEM COMERCIAL -->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Comercial">
+          <a class="nav-link nav-link-collapse collapsed" id="comercial" data-toggle="collapse" data-parent="#navbarResponsive" href="#itemcomercial" aria-expanded="false">
+            <i class="fa fa-handshake-o"></i>
+            <span class="nav-link-text">Comercial</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="itemcomercial">
+            <li><a href="/comercial/gerenciarcliente">Gerenciar Cliente</a></li>
+
+            {% if user.perfil == 'G' %}
+            <li><a href="/comercial/gerenciarfornecedor">Gerenciar Fornecedor</a></li>
+            <li><a href="/comercial/gerenciarmaterial">Gerenciar Material</a></li>
+            <li><a href="/comercial/gerenciartecido">Gerenciar Tecido</a></li>
+            {% endif %}
+
+            <li><a href="/comercial/gerenciarproduto">Gerenciar Produto</a></li>
+
+            {% if user.perfil == 'G' or user.perfil == 'V' %}
+            <li><a href="/comercial/gerenciarpedido">Gerenciar Pedido</a></li>
+            {% endif %}
+
+            {% if user.perfil == 'G' %}
+            <li><a href="/comercial/gerenciarcompra">Gerenciar Compra</a></li>
+            {% endif %}
+          </ul>
+        </li>
+
+        {% if user.perfil == 'G' or user.perfil == 'A' %}
+        <!-- ITEM PRODUÇÃO -->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Produção">
+          <a class="nav-link nav-link-collapse collapsed" id="producao" data-toggle="collapse" data-parent="#navbarResponsive" href="#itemproducao" aria-expanded="false">
+            <i class="fa fas fa-cut"></i>
+            <span class="nav-link-text">Produção</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="itemproducao">
+            <li><a href="/producao/gerenciarprestador">Gerenciar Prestador</a></li>
+            <li><a href="/producao/gerenciarservico">Gerenciar Serviço</a></li>
+          </ul>
+        </li>
+        {% endif %}
+
+        <!-- ITEM EXPEDIÇÃO -->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Expedicao">
+          <a class="nav-link" href="/expedicao" id="expedicao">
+            <i class="fa fab fa-stack-overflow"></i>
+            <span class="nav-link-text">Expedição</span>
+          </a>
+        </li>
+
+        {% if user.perfil == 'G' %}
+        <!-- ITEM GERENCIAL -->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerencial">
+          <a class="nav-link nav-link-collapse collapsed" id="gerencial" data-toggle="collapse" data-parent="#navbarResponsive" href="#itemgerencial" aria-expanded="false">
+            <i class="fa fa-bar-chart"></i>
+            <span class="nav-link-text">Gerencial</span>
+          </a>
+            <ul class="sidenav-second-level collapse" id="itemgerencial">
+              <li><a href="/gerencial/gerenciarusuario">Gerenciar Usuário</a></li>
+            </ul>
+        </li>
+        {% endif %}
+        
+      </ul>
+
+    <!-- USER E LOGOUT-->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <i class="fa fa-fw fa-user"></i>
+            {% if user.is_authenticated %}
+                Olá {{ user.username }}
+              {% else %}
+                Perfil
+              {% endif %}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" onclick="redefinirSenha()" data-toggle="modal" data-target="#modalRedefinirSenha" data-remote="false">Redefinir Senha</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#outModal">
+              <i class="fa fa-sign-out"></i>Sair</a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO -->
+
+  <main class="content-wrapper">
+    <div class="container-fluid">
+     {% block main %}
+
+    {% endblock %}
+    </div>
+  </main>
+
+
+  <!-- RODAPÉ -->
+  <footer class="sticky-footer d-print-none">
+    <div class="container">
+      <div class="text-center small">
+        <small>&copy; 2018 DayLight Manager System. Todos os direitos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão subir inicio da pagina-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/zabuto_calendar.js' %}"></script>
+  <script src="{% static 'js/calendario.js' %}"></script>
+  <script src="{% static 'jquery/formset.js' %}"></script>
+  <script src="{% static 'jquery/jquery.mask.min.js' %}"></script>
+
+  <!-- Custom -->
+  <script src="{% static 'js/sb-admin.min.js' %}"></script>
+
+  <!-- custom daylight -->
+  <script src="{% static 'jquery/custom_daylight.js' %}"></script>
+
+  <!-- pnotify -->
+  <script src="{% static 'pnotify/dist/pnotify.js' %}"></script>
+  <script src="{% static 'pnotify/dist/pnotify.buttons.js' %}"></script>
+  <script src="{% static 'pnotify/dist/pnotify.nonblock.js' %}"></script>
+
+  <!-- alertas_isme -->
+  <script src="{% static 'jquery/alertas.js' %}"></script>
+
+
+
+  <script type="text/javascript">
+      $(function() {
+        $(".inline.{{ form_itempedido.prefix }}").formset({
+            prefix: "{{ form_itempedido.prefix }}",
+            added: function () { reload_auto_complete() },
+        })
+      });
+
+      $(function() {
+        $(".inline.{{ form_itemcompra.prefix }}").formset({
+            prefix: "{{ form_itemcompra.prefix }}",
+            added: function () { reload_auto_complete() },
+        })
+      });
+
+      $(function() {
+        $(".inline.{{ form_itemservico.prefix }}").formset({
+            prefix: "{{ form_itemservico.prefix }}",
+            added: function () { reload_auto_complete() },
+        })
+      })
+  </script>
+
+  {% include "modal_logout.html" %}
+
+
+  <div class="modal fade" id="modalRedefinirSenha" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content" id="containerRedefinirSenha"></div>
+    </div>
+  </div>
+
+</body>
+</html>

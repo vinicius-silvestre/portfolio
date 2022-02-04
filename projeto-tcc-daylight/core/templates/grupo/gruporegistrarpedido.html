@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item">Comercial</li>
+    <li class="breadcrumb-item active">Registrar Pedido</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <h6 class="card-header">Adicionar</h6>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="POST" autofocus>
+                            {% csrf_token %}
+                            
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <div class="form-group">
+                                        <label class="small">Selecionar Cliente</label>
+                                        <input class="form-control small" type="text" size="100" id="nome_cliente" name="nome_cliente">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-lg-4">
+                            <div class="form-group">
+                            <label for="servico-list" class="small">Tipo de Produto</label>
+                                    <select id="servico-list" class="form-control">
+                                        <option>--Selecione--</option>
+                                        <option>Avental</option>
+                                        <option>Camisa</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </form>
+
+                    <div class="col-lg-2">
+                         <div class="form-group">
+                        <label for="servico-list" class="small">Tamanho</label>
+                                <select id="servico-list" class="form-control">
+                                    <option>--Selecione--</option>
+                                    <option>Único</option>
+                                    <option>PP</option>
+                                    <option>P</option>
+                                    <option>M</option>
+                                    <option>G</option>
+                                    <option>2G</option>
+                                    <option>3G</option>
+                                    <option>4G</option>
+                                    <option>XG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </form>  
+                <div class="col-lg-2">
+                    
+                    <label for="servico-list" class="small" >Quantidade</label>
+                    <input class="form-control small relative" type="text" size="100" id="nome_cliente" name="nome_cliente" style="width:154px;">
+                    </div>
+                </form>
+            </div>
+        
+            
+            <div class="form-row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                <label for="servico-list" class="small">Tecido</label>
+                        <select id="servico-list" class="form-control">
+                            <option>--Selecione--</option>
+                            <option>Algodão</option>
+                            <option>Caxemira</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </form>   
+        
+        <div class="col-lg-4">
+            <div class="form-group">
+            <label for="servico-list" class="small">Forma de Pagamento</label>
+                    <select id="servico-list" class="form-control">
+                        <option>--Selecione--</option>
+                        <option>Boleto Bancário</option>
+                        <option>Cartão de Crédito / Visa </option>
+                        <option>Cartão de Crédito / Master Card </option>
+                        <option>Dinheiro</option>
+
+                    </select>
+                </div>
+            
+        </form>
+    </form>                    
+</div>      
+</div>                      
+
+                            <div class="pull-right">
+                                <a href="{% url 'list_cliente' %}">
+                                    <button type="submit" class="btn btn-success btn-md pull-right">Adicionar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <table class="table table-hover text-center">
+                <thead class="card-header">
+                    <tr class="card-header">
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Tecido</th>
+                        <th scope="col">Quant.</th>
+                        <th scope="col">Tam.</th>
+                        <th scope="col">Pagamento</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">José da Silva</th>
+                        <td>Camisa</td>
+                        <td>Algodão</td>
+                        <td>15</td>
+                        <td>G</td>
+                        <td>Boleto Bancário</td>
+                        <td>
+                            <button class="btn btn-primary btn-xs">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                            <button class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash-o"></i>
+                            </button>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                            <th scope="row">José da Silva</th>
+                            <td>Camisa</td>
+                            <td>Algodão</td>
+                            <td>15</td>
+                            <td>G</td>
+                            <td>Boleto Bancário</td>
+                            <td>
+                                <button class="btn btn-primary btn-xs">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                                <button class="btn btn-danger btn-xs">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                            
+                            </td>
+                        </tr>
+            </table>
+            
+                {% for cliente in lista_cliente %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ cliente.clientename }}</th>
+                        <td>{{ pedido.produto }}</td>
+                        <td>{{ pedido.tecido }}</td>
+                        <td>{{ pedido.quantidade }}</td>
+                        <td>{{ pedido.tamanho }}</td>
+                        <td>{{ pedido.forma_pagamento }}</td>
+
+                        {% if cliente %}
+                        <td><a href="{% url 'update_cliente' cliente.id %}"><button class="btn btn-warning btn-xs"><i class="fa fa-edit"></i></button></a>
+                            <a href="{% url 'delete_cliente' cliente.id %}"><button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button></a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="card-body">
+            <a href="/cadastro/cliente"><button type="submit" class="btn btn-success btn-md pull-right">Salvar</button></a>
+        </div>
+    </div>
+</div>
+<br />
+{% endblock %}

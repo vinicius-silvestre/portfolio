@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Gerenciar Prestador de Serviço</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="/producao/cadastrarprestador"><button class="btn btn-primary btn-sm pull-right">Novo Prestador</button></a>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-12 col-sm-12">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <div class="form-row">
+                                <div class="col-xl-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Prestador</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="100" id="nome_prestador" name="nome_prestador">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Email</label>
+                                        <input class="form-control form-control-sm textlowercase" type="email" size="100" id="email_prestador" name="email_prestador">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">CPF/CNPJ</label>
+                                        <input class="form-control form-control-sm pesq_cpfcnpj" type="text" id="cpf/cnpj_prestadorr" name="cpf/cnpj_prestador">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pull-right">
+                                <a href="{% url 'list_prestador' %}">
+                                    <button type="submit" class="btn btn-secundary btn-sm pull-right">Pesquisar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+        <div class="table-responsive border rounded">
+            <table role="grid" class="table table-hover table-sm table-secundary">
+                <thead scope="col" class="card-header">
+                    <tr>
+                        <th scope="col">Prestador</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Classificação Fiscal</th>
+                        <th scope="col">CNPJ/CPF</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                {% for prestador in lista_prestador %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ prestador.prestadorname }}</th>
+                        <td>{{ prestador.email }}</td>
+                        <td>{{ prestador.telefone }}</td>
+                        <td>{{ prestador.class_fiscal }}</td>
+                        <td>{{ prestador.numero_fiscal }}</td>
+
+                        {% if prestador %}
+                        <td><a href="{% url 'update_prestador' prestador.uuid %}"><button class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></button></a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

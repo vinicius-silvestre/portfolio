@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+{% csrf_token %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Expedição</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="pull-right">
+            <a href="{% url 'expedicao' %}"><button type="submit" class="btn btn-success btn-sm" id="btn_pedidoentregue">Pedido Entregue</button></a>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+        <div class="table-responsive border rounded">
+            <table role="grid" class="table table-hover table-sm table-secundary">
+                <thead scope="col" class="card-header">
+                    <tr>
+                        <th><input type="checkbox" class="checkAll" name="checkAll" onclick="checkAll()"/></th>
+                        <th scope="col">Pedido</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Data do Pedido</th>
+                        <th scope="col">Previsão de Entrega</th>
+                        <th scope="col">Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                {% for entrega in pronto_entrega %}
+                <tbody>
+                    <tr class="even pointer">
+                        <td class="a-center">
+                            <input type="checkbox" name="check" class="flat" value="{{ entrega.uuid }}"/>
+                        </td>
+                        <th scope="row">{{ entrega.numero_pedido }}</th>
+                        <td>{{ entrega.cliente }}</td>
+                        <td>{{ entrega.data_pedido|date:'d/m/Y' }}</td>
+                        <td>{{ entrega.data_entrega|date:'d/m/Y' }}</td>
+                        <td>Disponível para entrega</td>
+                        <td>
+                            <a onclick="detalhesPedido('{{ entrega.uuid }}')" data-toggle="modal" data-target="#modalDetalhes" data-remote="false">
+                                <button class="btn btn-secundary btn-sm">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalPedido" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="containerPedido"></div>
+    </div>
+</div>
+
+{% endblock %}

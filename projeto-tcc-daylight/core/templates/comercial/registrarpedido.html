@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb d-print-none" id="title_pedido">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item">
+        <a href="/comercial/gerenciarcliente">Gerenciar Pedido</a>
+    </li>
+    <li class="breadcrumb-item active">Registrar Pedido</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form method="POST" id="pedidoFormsets">
+                            {% csrf_token %}
+
+                            <div class="form-row d-print-none">
+                                <div class="col-xl-12 col-sm-12 col-xs-12 mb-3">
+                                    <div class="pull-right">
+                                        <a href="/comercial/gerenciarpedido"><input type="button" class="btn btn-danger btn-sm" value="Cancelar"></a>
+                                        <a href="{% url 'register_pedido' %}"><input id="btn_pedido" type="submit" class="btn btn-success btn-sm" value="Salvar"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Data do Pedido</label>
+                                        {{ form_pedido.data_pedido}}
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Data de Entrega</label>
+                                        {{ form_pedido.data_entrega}}
+                                    </div>
+                                </div>
+                                {{ form_pedido.numero_pedido }}
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-xl-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Cliente</label>
+                                        {{ form_pedido.cliente }}
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Nome do Solicitante</label>
+                                        {{ form_pedido.solicitante }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row d-print-none">
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Forma de Pagamento</label>
+                                        {{ form_pedido.forma_pagamento }}
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12 d-print-none">
+                                    <div class="form-group">
+                                        <label class="small">Prazo de Pagamento</label>
+                                        {{ form_pedido.prazo_pagamento }}
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12 d-print-none">
+                                    <div class="form-group">
+                                        <label class="small">Valor Total</label>
+                                        {{ form_pedido.valor_total }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-xl-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Endereço Entrega</label>
+                                        {{ form_pedido.endereco_entrega }}
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12 d-print-none">
+                                    <div class="form-group">
+                                        <label class="small">Status do Pedido</label>
+                                        {{ form_pedido.status }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-xl-7 col-sm-7 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Observação</label>
+                                        {{ form_pedido.observacao }}
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-2 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Personalização</label>
+                                        {{ form_pedido.personalizacao }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+                                    <div class="table-responsive border rounded">
+                                        <table role="grid" class="table table-hover table-sm table-secundary">
+                                            <thead scope="col" class="card-header">
+                                                <tr>
+                                                    <th>Produto</th>
+                                                    <th>Cor</th>
+                                                    <th>Tecido</th>
+                                                    <th>Quantidade</th>
+                                                    <th class="d-print-none">Valor Unitário</th>
+                                                    <th class="d-print-none">Valor Total</th>
+                                                    <th class="d-print-none"></th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            {{ form_itempedido.management_form }}
+                                                {% for f in form_itempedido.forms %}
+                                                {{ f.uuid }}
+                                                {{ f.numero_pedido }}
+                                                <tr class="inline {{ form_itempedido.prefix }}">
+                                                    <td>{{ f.produto }}</td>
+                                                    <td>{{ f.cor }}</td>
+                                                    <td>{{ f.tecido }}</td>
+                                                    <td>{{ f.quantidade }}</td>
+                                                    <td class="d-print-none">{{ f.valor_unitario }}</td>
+                                                    <td class="d-print-none">{{ f.valor_total }}</td>
+                                                    <td class="d-print-none">{{ f.DELETE }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+{% endblock %}

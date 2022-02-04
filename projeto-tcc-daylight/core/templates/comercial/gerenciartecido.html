@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- CABEÇALHO PAGINA -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="/">
+            <i class="fa fa-home fa-lg"></i>
+        </a>
+    </li>
+    <li class="breadcrumb-item active">Gerenciar Tecido</li>
+</ol>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="/comercial/cadastrartecido"><button class="btn btn-primary btn-sm pull-right">Novo Tecido</button></a>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-12 col-sm-12">
+                        <form method="POST">
+                            {% csrf_token %}
+
+                            <div class="form-row">
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Tipo de Tecido</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="50" id="tipo_tecido" name="tipo_tecido">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-3 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Fabricante</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="50" id="fabricante" name="fabricante">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="small">Descrição do Tecido</label>
+                                        <input class="form-control form-control-sm textcapitalize" type="text" size="100" id="desc_tecido" name="desc_tecido">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pull-right">
+                                <a href="{% url 'list_tecido' %}">
+                                    <button type="submit" class="btn btn-secundary btn-sm pull-right">Pesquisar</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xl-12 col-sm-12 col-xs-12 mb-3 text-center small">
+        <div class="table-responsive border rounded">
+            <table role="grid" class="table table-hover table-sm table-secundary">
+                <thead scope="col" class="card-header">
+                    <tr>
+                        <th scope="col">Tipo de Tecido</th>
+                        <th scope="col">Descrição do Tecido</th>
+                        <th scope="col">Fabricante</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                {% for tecido in lista_tecido %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ tecido.tipo_tecido }}</th>
+                        <td>{{ tecido.tecido }}</td>
+                        <td>{{ tecido.nome_fabricante }}</td>
+
+                         {% if tecido %}
+                        <td>
+                            <a href="{% url 'update_tecido' tecido.uuid %}">
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+                            </a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
