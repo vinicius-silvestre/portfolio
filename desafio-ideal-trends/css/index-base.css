@@ -1,0 +1,295 @@
+/* Add a black background color to the top navigation */
+* {
+  box-sizing: border-box;
+}
+
+
+header{
+  background: rgb(0, 32, 99);
+  color: rgb(233, 233, 233);
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 23px;
+  padding: 4px;
+  
+}
+
+body {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.txt1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.txt2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #7e7e7e;
+}
+
+.txt3{
+  margin-right: 20%;
+  text-align: right;
+}
+
+.topnav {
+    background-color:white;
+    overflow: hidden;
+    margin-right: 12.5%;
+    margin-left: 20%;
+    
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  
+  float: left;
+  color: #7e7e7e;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.box {
+  z-index:3;
+  display: inline-block;
+  color: white;
+}
+.menu{
+	width: 100%;
+	height: 50px;
+	text-decoration:none;
+}
+.menu ul li{
+	list-style:none;
+	position: relative;
+	
+}
+.menu ul li{
+	width: 100px;
+	float:left;
+	
+
+}
+
+.dropdown a{
+  background-color: #e6e6e6;
+  z-index: 3;
+}
+
+.vertical ul ul{
+    float:relative;
+    position: absolute;
+    visibility: hidden;
+}
+
+.vertical ul li:hover ul{
+    float:relative;
+    
+    visibility:visible;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 50px 0;
+  
+}
+
+.grid-containerbox {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 15px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+.grid-containerbox > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 25px 0;
+  
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+footer{
+  
+  background: rgb(71, 71, 71);
+  text-align:center;
+  margin-top: 100px;
+  color: rgb(233, 233, 233);
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 200px;
+  
+}
+
+
+
+footer li{
+  float: right;
+  
+  
+}
+
+footer li a {
+  
+  display: block;
+  color: white; 
+  padding: 16px;
+  text-decoration: none;
+  
+}
+
+footer ul {
+  list-style:none;
+  position:relative;
+  margin: 20px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.caixa{
+  display:flex;
+  justify-content: center;
+ }
+
+
+/*Underline Menu Effect*/
+*:before,
+*:after {
+            box-sizing: border-box;
+        }
+
+.underline{
+            list-style: none;
+            font-size: 2em;
+}
+        
+.underline{
+            display: inline-block;
+}
+        
+.underline{
+  position: relative;
+  text-decoration: none;
+  margin: 0px;
+            
+}
+       
+.underline a:after {
+	content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    background-color: navy;
+    width: 0px;
+    height: 3px;
+    transition: all 0.3s;
+}
+
+.underline a:hover {
+	opacity: 0.8; 
+	-moz-opacity: 0.5;
+	Filter: (Opacity=100)
+ 	max-width: 100%;
+  -moz-transition : 0.3s;
+  -webkit-transition: 0.3s;
+ 	transition: 0.3s;
+  color:navy;
+}
+.underline a:hover:after {
+    width: 97%;
+}
+/*Finish Underline Hover Menu*/
+
+
+
+@media (max-width: 1198px) {
+  
+  .grid-containerbox{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .grid-containerbox > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 25px 0;
+    
+  }
+
+  
+}
+
+
+
+@media (max-width: 986px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-gap: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 50px 0;
+    
+  }
+}
+@media (max-width: 600px) {
+  .grid-containerbox{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 15px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .grid-containerbox > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    padding: 25px 0;
+    
+  }
+  img {
+    max-width: 180px;
+    height: auto;
+  }
+}
